@@ -1,23 +1,14 @@
 import java.util.*;
 public class LogicalPrograms{
     public static void main(String[] args) {
-        int flag=0;
-        //n is number to be checked
-        int n=5;
-        int m=n/2;
-        if(n==0||n==1){
-            System.out.println(n+" is not prime number");
-        }else{
-            for(int i=2;i<=m;i++){
-                if(n%i==0){
-                    System.out.println(n+" is not prime number");
-                    flag=1;
-                    break;
-                }
-            }
-            if(flag==0)  {
-                System.out.println(n+" is prime number");
-            }
+        int number=231;
+        int remainder=0;
+        int reverse=0;
+        for(int i=1;i<=3;i++){
+            remainder=number%10;
+            reverse=(reverse*10)+remainder;
+            number=number/10;
         }
+        System.out.println(reverse);
     }
 }
